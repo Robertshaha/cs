@@ -124,3 +124,33 @@ class Marketplace:
                 self.filter_items(rarity if rarity else None, name_contains if name_contains else None)
             elif choice == '0':
                 break
+
+def main():
+    marketplace = Marketplace()
+    while True:
+        print("\nГлавное меню:")
+        print("1. Регистрация")
+        print("2. Вход")
+        print("0. Выход")
+        choice = input("Выберите опцию: ")
+
+        try:
+            if choice == '1':
+                username = input("Введите имя пользователя: ")
+                password = input("Введите пароль: ")
+                marketplace.register_user(username, password)
+            elif choice == '2':
+                username = input("Введите имя пользователя: ")
+                password = input("Введите пароль: ")
+                if marketplace.login(username, password):
+                    if marketplace.current_user.role == 'admin':
+                        marketplace.admin_menu()
+                    else:
+                        print("Функция пользовательского меню не реализована.")
+            elif choice == '0':
+                print("Выход из программы.")
+                break
+            else:
+                print("Некорректный выбор, попробуйте еще раз.")
+        except Exception as e:
+            print(f"Произошла ошибка: {e}")
