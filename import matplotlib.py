@@ -128,7 +128,7 @@ class Marketplace:
 def main():
     marketplace = Marketplace()
     while True:
-        print("\nГлавное меню:")
+        print("Главное меню:")
         print("1. Регистрация")
         print("2. Вход")
         print("0. Выход")
