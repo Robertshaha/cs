@@ -154,3 +154,6 @@ def main():
                 print("Некорректный выбор, попробуйте еще раз.")
         except Exception as e:
             print(f"Произошла ошибка: {e}")
+
+if __name__ == "__main__":
+    main()
