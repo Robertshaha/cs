@@ -91,7 +91,7 @@ class Marketplace:
 
     def admin_menu(self):
         while True:
-            print("\nАдминистративное меню:")
+            print("Административное меню:")
             print("1. Добавить товар")
             print("2. Удалить товар")
             print("3. Изменить товар")
